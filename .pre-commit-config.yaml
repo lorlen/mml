@@ -1,0 +1,18 @@
+repos:
+  - repo: local
+    hooks:
+    - id: fmt
+      name: Format sources
+      entry: cargo fmt
+      language: system
+      pass_filenames: false
+    - id: check
+      name: Check for errors
+      entry: cargo check
+      language: system
+      pass_filenames: false
+    - id: test
+      name: Test the program
+      entry: cargo test
+      language: system
+      pass_filenames: false
